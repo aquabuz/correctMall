@@ -17,6 +17,8 @@
 
   <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
   <!--@js(/layout/basic/js/common.js)-->
+  <!--@js(/layout/basic/js/headroom.min.js)-->
+  <!--@js(/layout/basic/js/control.js)-->
 </head>
 
 <body id="main">
@@ -38,7 +40,7 @@
     <!--@import(/layout/basic/sidebar.html)-->
     <hr class="layout">
     <div id="container">
-      <header id="header">
+      <header id="header" class="header header--fixed hide-from-print" role="banner">
         <div class="header">
           <section id="topArea">
             <div class="searchWrap">
