@@ -2,7 +2,7 @@
  * 모바일쇼핑몰 슬라이딩메뉴 */
 var aCategory = [];
 $(document).ready(function(){
-    $('#header').append('<div id="dimmedSlider"></div>');
+    $('#wrap').append('<div id="dimmedSlider"></div>');
     var methods = {
         aCategory    : [],
         aSubCategory : {},
@@ -149,7 +149,7 @@ $(document).ready(function(){
     var offCover = {
         init : function() {
             $(function() {
-               $('#wrap').append('<a href="#container" id="btnFoldLayout">메뉴 토글</a>');
+               $('#wrap').append('<a href="#container" id="btnFoldLayout"></a>');
                 offCover.resize();
                 $(window).resize(function(){
                     offCover.resize();
@@ -162,7 +162,7 @@ $(document).ready(function(){
                 $('#aside').css({'visibility':'visible'});
 
                 setTimeout(function(){
-                    $('#btnFoldLayout').css({'background':'rgba(0,0,0,0.7)'});
+                    $('#btnFoldLayout').css({'background':'rgba(0,0,0,0.1)'});
                 }, 350);
             } else {
                 $('#btnFoldLayout').hide();
@@ -185,7 +185,8 @@ $(document).ready(function(){
     $('#header .fold, #aside .btnClose').click(function(e){
         $('#dimmedSlider').toggle();
         $('html').toggleClass('expand');
-        offCover.layout(); console.log("AAA");
+        offCover.layout();
+        // console.log("AAA");
         e.preventDefault();
     });
 
