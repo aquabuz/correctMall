@@ -162,13 +162,14 @@ $(document).ready(function(){
                 $('#aside').css({'visibility':'visible'});
 
                 setTimeout(function(){
-                    $('#btnFoldLayout').css({'background':'rgba(0,0,0,0.1)'});
-                }, 350);
+                  $('#btnFoldLayout').addClass('active');
+                }, 300);
             } else {
                 $('#btnFoldLayout').hide();
+                $('#btnFoldLayout').removeClass('active');
                 setTimeout(function(){
-                     $('#aside').css({'visibility':'hidden'});
-                    }, 300);
+                  $('#aside').css({'visibility':'hidden'});
+                }, 300);
             }
             $('#aside').css({'visibility':'visible'});
         },
