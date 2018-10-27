@@ -1,4 +1,5 @@
 // Root File
+@import 'scss/common.scss';
 @import 'scss/contents.scss';
 @import 'scss/slideMenu.scss';
 $color-primary: #927441;
@@ -70,6 +71,19 @@ body {
   h1 {
     height: $header-height;
     line-height: $header-height;
+
+    a {
+      @extend %flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      max-width: 126px;
+    }
   }
 
   .searchWrap {
@@ -110,6 +124,14 @@ body {
   }
 }
 
+#contents {
+  padding-top: $header-height;
+
+  &.main {
+    padding-top: 0;
+  }
+}
+
 .prdList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,7 +143,14 @@ body {
   justify-content: space-between;
 
   > li {
+    position: relative;
     width: 48%;
+
+    .likeButton {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
   .description {
@@ -207,6 +236,11 @@ body {
   }
 }
 // Left menu
+// detail
+
+.xans-product-detail h1.name {
+  text-align: left;
+}
 
 html {
   &.expand {
@@ -379,4 +413,18 @@ html {
   z-index: 404;
   background: none;
   // @extend %time;
+}
+
+#opt_layer_background {
+  // display: none !important;
+}
+
+#opt_layer_iframe_parent {
+  top: 0 !important;
+  z-index: 99999 !important;
+}
+
+#productOptionIframe {
+  position: fixed;
+  height: 100%;
 }

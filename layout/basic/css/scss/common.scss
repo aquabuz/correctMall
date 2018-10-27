@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.hidden-copy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0;
+  text-indent: -9999px;
+  z-index: -1;
+}

@@ -1,49 +1,59 @@
 <!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
-    <title></title>
-    <!--@css(/layout/basic/css/common.css)-->
-    <!--@css(/layout/basic/css/layout.css)-->
-    <!--@css(/layout/basic/css/ec-base-ui.css)-->
-    <!--@css(/layout/basic/css/paginate.css)-->
-    <!--@css(/layout/basic/css/ec-base-help.css)-->
-    <!--@css(/layout/basic/css/ec-base-product.css)-->
-    <!--@css(/layout/basic/css/ec-base-button.css)-->
-    <!--@css(/layout/basic/css/ec-base-layer.css)-->
-    <!--@css(/layout/basic/css/ec-base-tab.css)-->
-    <!--@css(/layout/basic/css/correct.min.css)-->
 
-    <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
-    <!--@js(/layout/basic/js/common.js)-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+  <title></title>
+  <!--@css(/layout/basic/css/common.css)-->
+  <!--@css(/layout/basic/css/layout.css)-->
+  <!--@css(/layout/basic/css/ec-base-ui.css)-->
+  <!--@css(/layout/basic/css/paginate.css)-->
+  <!--@css(/layout/basic/css/ec-base-help.css)-->
+  <!--@css(/layout/basic/css/ec-base-product.css)-->
+  <!--@css(/layout/basic/css/ec-base-button.css)-->
+  <!--@css(/layout/basic/css/ec-base-layer.css)-->
+  <!--@css(/layout/basic/css/ec-base-tab.css)-->
+  <!--@css(/layout/basic/css/correct.min.css)-->
+
+  <!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. -->
+  <!--@js(/layout/basic/js/common.js)-->
+  <!--@js(/layout/basic/js/headroom.min.js)-->
+  <!--@js(/layout/basic/js/control.js)-->
 </head>
+
 <body id="layout">
-     <div id="wrap">
-        <!--@import(/layout/basic/sidebar.html)-->
-        <hr class="layout">
-        <div id="container">
-            <header id="header">
-                <div class="header">
-                    <section id="topArea">
-                        <div class="searchWrap">
-                            <p class="category"><a href="#none" class="fold">카테고리</a></p>
-                            <h1 module="Layout_LogoTop"><a href="/">{$mobile_title}</a></h1>
-                            <!-- //// <p class="search"><button type="button">검색</button></p> -->
-                            <p module="Layout_orderBasketcount">
-                                <a href="/order/basket.html" class="btnBasket">장바구니<span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
-                            </p>
-                        </div>
-                    </section>
-                </div>
-            </header>
-            <hr class="layout">
-            <div id="contents">
-                <!--@contents-->
+  <div id="wrap">
+    <!--@import(/layout/basic/sidebar.html)-->
+    <hr class="layout">
+    <div id="container">
+      <header id="header" class="header header--fixed hide-from-print" role="banner">
+        <div class="header">
+          <section id="topArea">
+            <div class="searchWrap">
+              <p class="category"><a href="#none" class="fold">카테고리</a></p>
+              <h1 module="Layout_LogoTop">
+                <a href="/">
+                  <img src="/layout/basic/images/logo.png" alt="Day Review">
+                  <span class="hidden-copy">{$mobile_title}</span>
+                </a>
+              </h1>
+              <p module="Layout_orderBasketcount">
+                <a href="/order/basket.html" class="btnBasket">장바구니<span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+              </p>
             </div>
-            <hr class="layout">
-            <!--@import(/layout/basic/footer.html)-->
+            <!-- //// nav delete  -->
+          </section>
         </div>
+      </header>
+      <hr class="layout">
+      <div id="contents">
+        <!--@contents-->
+      </div>
+      <hr class="layout">
+      <!--@import(/layout/basic/footer.html)-->
     </div>
+  </div>
 </body>
+
 </html>

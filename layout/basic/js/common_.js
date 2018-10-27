@@ -50,22 +50,22 @@ $(document).ready(function(){
     /**
      *  상단탑버튼
      */
-    var globalTopBtnScrollFunc = function() {
-        // 탑버튼 관련변수
-        var $btnTop = $('#btnTop');
-
-        $(window).scroll(function() {
-            try {
-                var iCurScrollPos = $(this).scrollTop();
-
-                if (iCurScrollPos > ($(this).height() / 2)) {
-                    $btnTop.fadeIn('fast');
-                } else {
-                    $btnTop.fadeOut('fast');
-                }
-            } catch(e) { }
-        });
-    };
+    // var globalTopBtnScrollFunc = function() {
+    //     // 탑버튼 관련변수
+    //     var $btnTop = $('#btnTop');
+    //
+    //     $(window).scroll(function() {
+    //         try {
+    //             var iCurScrollPos = $(this).scrollTop();
+    //
+    //             if (iCurScrollPos > ($(this).height() / 2)) {
+    //                 $btnTop.fadeIn('fast');
+    //             } else {
+    //                 $btnTop.fadeOut('fast');
+    //             }
+    //         } catch(e) { }
+    //     });
+    // };
 
     /**
      *  구매버튼
@@ -95,7 +95,7 @@ $(document).ready(function(){
         });
     };
 
-    globalTopBtnScrollFunc();
+    // globalTopBtnScrollFunc();
     globalBuyBtnScrollFunc();
 });
 
