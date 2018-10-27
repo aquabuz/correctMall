@@ -115,3 +115,18 @@ body { background:none; !important; }
 
 /* 옵션 레이어 > 네이버 체크아웃 */
 #product_detail_option_layer #NaverChk_Button { margin:14px 0 15px; }
+
+/* //// 커스텀 */
+#product_detail_option_layer {
+  height: 100%;
+}
+
+.xans-element-.xans-product.xans-product-action {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#product_detail_option_layer .optionArea {
+  max-height: 100%;
+}
