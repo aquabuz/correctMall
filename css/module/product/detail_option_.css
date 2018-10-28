@@ -1,10 +1,12 @@
 body { background:none; !important; }
 
 /* 옵션 레이어 */
-#product_detail_option_layer { position:absolute; left:7px; top:0; right:7px; z-index:10000; border-radius:5px; background:#f1f1f1; }
+#product_detail_option_layer { position:fixed; left:0; top:0; right:0; height: 100%; z-index:10000; background:#f1f1f1; }
+/* //// #product_detail_option_layer { position:absolute; left:7px; top:0; right:7px; z-index:10000; border-radius:5px; background:#f1f1f1; } */
 #product_detail_option_layer:before { content:""; display:block; height:35px; }
 #product_detail_option_layer:before { content:""; display:block; height:35px; }
-#product_detail_option_layer .optionArea { max-height:200px; border-top:1px solid #ccc; overflow-y:scroll; /* -webkit-overflow-scrolling:touch; */ }
+#product_detail_option_layer .optionArea { max-height:100%; border-top:1px solid #ccc; overflow-y:scroll; /* -webkit-overflow-scrolling:touch; */ }
+/* //// #product_detail_option_layer .optionArea { max-height:200px; border-top:1px solid #ccc; overflow-y:scroll; -webkit-overflow-scrolling:touch;} */
 #product_detail_option_layer .byte { font-size:11px; vertical-align:middle; }
 #product_detail_option_layer .byte strong { color:#1b87d4; }
 #product_detail_option_layer .btnClose { position:absolute; right:0; top:1px; width:15px; height:15px; padding:10px; }

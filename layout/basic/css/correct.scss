@@ -126,7 +126,6 @@ body {
 
 #contents {
   padding-top: $header-height;
-
   &.main {
     padding-top: 0;
   }
@@ -145,7 +144,6 @@ body {
   > li {
     position: relative;
     width: 48%;
-
     .likeButton {
       position: absolute;
       top: 0;
@@ -236,8 +234,8 @@ body {
   }
 }
 // Left menu
-// detail
 
+// detail
 .xans-product-detail h1.name {
   text-align: left;
 }
@@ -413,19 +411,4 @@ html {
   z-index: 404;
   background: none;
   // @extend %time;
-}
-
-#opt_layer_background {
-  // display: none !important;
-}
-
-#opt_layer_iframe_parent {
-  top: 0 !important;
-  height: 100% !important;
-}
-
-#productOptionIframe {
-  position: fixed;
-  height: 100% !important;
-  // height: 600px !important;
 }

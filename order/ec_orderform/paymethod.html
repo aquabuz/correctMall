@@ -60,6 +60,23 @@
                     </table>
                 </div>
 
+                <!-- 에스크로(가상계좌) -->
+                <div id="{$payment_input_icash}" class="ec-base-table typeWrite">
+                    <table border="1">
+                        <caption>에스크로(가상계좌)</caption>
+                        <colgroup>
+                            <col style="width:100px" />
+                            <col style="width:auto" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">에스크로</th>
+                                <td>{$form.flagEscrowIcashUse}<label for="flagEscrowIcashUse0">에스크로(구매안전)서비스를 적용합니다.</label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
                 <!-- 카드사 직접결제: 카드/할부선택 -->
                 <div class="ec-base-table typeWrite">
                     {$directpay_card_form}

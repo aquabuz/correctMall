@@ -2,16 +2,16 @@
 <div module="product_detail">
     <!--@css(/css/module/product/detail.css)-->
     <!--@js(/js/module/product/detail.js)-->
-    <!-- //// <div id="titleArea">
+    <div id="titleArea">
         <h2>상품상세 정보</h2>
         <span module="Layout_MobileAction">
             <a href="#none" onclick="{$go_back}"><img src="//img.echosting.cafe24.com/skin/mobile_ko_KR/layout/btn_back.gif" width="33" alt="뒤로가기"></a>
         </span>
-    </div> -->
+    </div>
 
-    <!-- //// <h1 class="name">{$name}</h1> -->
+    <h1 class="name">{$name}</h1>
 
-    <!-- //// <p class="prdIcon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$img_mileage_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</p> -->
+    <p class="prdIcon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$img_mileage_icon} {$product_icons} {$pickup_icon} {$benefit_icons}</p>
 
     <!-- 참고 : 뉴상품관리 전용 변수가 포함되어 있습니다. 뉴상품관리 이외의 곳에서 사용하면 일부 변수가 정상동작하지 않을 수 있습니다. -->
     <div class="overview" module="product_image">
@@ -63,54 +63,49 @@
                     <col style="width:auto;">
                 </colgroup>
                 <tbody class="priceArea">
-                    <tr>
-                      <td colspan="2">
-                        <h1 class="name">{$name}</h1>
-                      </td>
-                    </tr>
-                    <tr class="{$product_custom|display}">
-                        <th scope="row">Price</th>
-                        <td class="price">
-                            <span>{$product_custom|numberformat}</span>
-                        </td>
-                    </tr>
                     <tr class="{$product_price_display|display}">
-                        <th scope="row">Sale</th>
+                        <th scope="row">판매가</th>
                         <td class="price">
                             <strong class="sale"><span id="span_product_price_text" class="{$product_price_class} {$product_sale_strike}">{$product_price}</span>{$txt_product_price}</strong><span id="span_product_price_text">{$product_tax_type_text}</span> <span class="soldOut"></span>
                             <button type="button" class="btnRestockSms {$sms_restock_display|display}" onClick="{$action_sms_restock}">재입고 알림 SMS</button>
                             <button type="button" class="btnRestockMail {$restock_email_display|display}" onClick="{$action_email_restock}">재입고 알림 메일</button>
                         </td>
                     </tr>
-                    <tr class="{$ma_product_code_display|display}">
-                        <th scope="row">Code</th>
-                        <td class="price">
-                            <span>{$ma_product_code}</span>
-                        </td>
-                    </tr>
-                    <tr class="{$mileage_display|display}">
-                        <th scope="row">Point</th>
-                        <td class="price">
-                            <span>{$txt_mileage_value|numberformat}({$txt_mileage_percent}%)</span>
-                            {$txt_mileage_display|display}
-                        </td>
-                    </tr>
                     <tr class="{$product_sale_display|display}" id="span_product_price_mobile_p_line">
-                        <th scope="row">Sale</th>
+                        <th scope="row">할인판매가</th>
                         <td class="price" ><strong class="sale"><span id="span_product_price_mobile_text" class="{$product_price_class}">{$product_price_mobile}</span>{$txt_product_price_mobile}</strong></td>
                     </tr>
                 </tbody>
                 <tbody>
                     <tr id="span_product_price_mobile_d_line" class="{$product_sale_display|display}">
-                        <th scope="row">Sale2</th>
+                        <th scope="row">할인금액</th>
                         <td><span class="discount">총 할인금액 {$mobile_dc_price|number}원<br>(모바일할인금액 {$mobile_dc_price|number}원)</span></td>
                     </tr>
+                    <tr class="mileage {$mileage_display|display}">
+                        <th scope="row">{$mileage_name}</th>
+                        <td>
+                            <p class="{$txt_mileage_display|display}"><span id="span_mileage_text">{$txt_mileage_value}</span><span class="{$txt_mileage_percent_display|display}">({$txt_mileage_percent}%)</span></p>
+                            <p class="{$cash_mileage_display|display}"><img src="{$cash_mileage_icon}" alt="무통장 결제시 적립금"><span class="{$cash_mileage_value_display|display}"> {$cash_mileage_value|numberformat} 원</span> <span class="{$cash_mileage_percent_display|display}">{$cash_mileage_percent}%</span></p>
+                            <p class="{$card_mileage_display|display}"><img src="{$card_mileage_icon}" alt="카드 결제시 적립금"><span class="{$card_mileage_value_display|display}"> {$card_mileage_value|numberformat} 원</span> <span class="{$card_mileage_percent_display|display}">{$card_mileage_percent}%</span></p>
+                            <p class="{$tcash_mileage_display|display}"><img src="{$tcash_mileage_icon}" alt="실시간 계좌이체시 적립금"><span class="{$tcash_mileage_value_display|display}"> {$tcash_mileage_value|numberformat} 원</span> <span class="{$tcash_mileage_percent_display|display}">{$tcash_mileage_percent}%</span></p>
+                            <p class="{$mileage_mileage_display|display}"><img src="{$mileage_mileage_icon}" alt="적립금 결제시 적립금"><span class="{$mileage_mileage_value_display|display}"> {$mileage_mileage_value|numberformat} 원</span> <span class="{$mileage_mileage_percent_display|display}">{$mileage_mileage_percent}%</span></p>
+                            <p class="{$cell_mileage_display|display}"><img src="{$cell_mileage_icon}" alt="휴대폰 결제시 적립금"><span class="{$cell_mileage_value_display|display}"> {$cell_mileage_value|numberformat} 원</span> <span class="{$cell_mileage_percent_display|display}">{$cell_mileage_percent}%</span></p>
+                            <p class="{$deposit_mileage_display|display}"><img src="{$deposit_mileage_icon}" alt="예치금 결제시 적립금"><span class="{$deposit_mileage_value_display|display}"> {$deposit_mileage_value|numberformat} 원</span> <span class="{$deposit_mileage_percent_display|display}">{$deposit_mileage_percent}%</span></p>
+                            <p class="{$escrow_mileage_display|display}"><img src="{$escrow_mileage_icon}" alt="에스크로 결제시 적립금"><span class="{$escrow_mileage_value_display|display}"> {$escrow_mileage_value|numberformat} 원</span> <span class="{$escrow_mileage_percent_display|display}">{$escrow_mileage_percent}%</span></p>
+                            <p class="{$vcash_mileage_display|display}"><img src="{$vcash_mileage_icon}" alt="가상계좌 결제시 적립금"><span class="{$vcash_mileage_value_display|display}"> {$vcash_mileage_value|numberformat} 원</span> <span class="{$vcash_mileage_percent_display|display}">{$vcash_mileage_percent}%</span></p>
+                            <p class="{$icash_mileage_display|display}"><img src="{$icash_mileage_icon}" alt="가상계좌 결제시 적립금"><span class="{$icash_mileage_value_display|display}"> {$icash_mileage_value|numberformat} 원</span> <span class="{$icash_mileage_percent_display|display}">{$icash_mileage_percent}%</span></p>
+                            <p class="{$kpay_mileage_display|display}"><img src="{$kpay_mileage_icon}" alt="케이페이 결제시 적립금"><span class="{$kpay_mileage_value_display|display}"> {$kpay_mileage_value|numberformat} 원</span> <span class="{$kpay_mileage_percent_display|display}">{$kpay_mileage_percent}%</span></p>
+                            <p class="{$paynow_mileage_display|display}"><img src="{$paynow_mileage_icon}" alt="페이나우 결제시 적립금"><span class="{$paynow_mileage_value_display|display}"> {$paynow_mileage_value|numberformat} 원</span> <span class="{$paynow_mileage_percent_display|display}">{$paynow_mileage_percent}%</span></p>
+                            <p class="{$payco_mileage_display|display}"><img src="{$payco_mileage_icon}" alt="페이코 결제시 적립금"><span class="{$payco_mileage_value_display|display}"> {$payco_mileage_value|numberformat} 원</span> <span class="{$payco_mileage_percent_display|display}">{$payco_mileage_percent}%</span></p>
+                            <p class="{$kakaopay_mileage_display|display}"><img src="{$kakaopay_mileage_icon}" alt="카카오페이 결제시 적립금"><span class="{$kakaopay_mileage_value_display|display}"> {$kakaopay_mileage_value|numberformat} 원</span> <span class="{$kakaopay_mileage_percent_display|display}">{$kakaopay_mileage_percent}%</span></p>
+                        </td>
+                    </tr>
                     <tr class="{$naver_mileage_display|display}">
-                        <th>Point2</th>
+                        <th>제휴적립금</th>
                         <td>{$naver_mileage_title} {$naver_mileage_rate}</td>
                     </tr>
                 </tbody>
-                <!-- <tbody class="delvtype">
+                <tbody class="delvtype">
                     <tr class="{$delivery_display|display}">
                         <th scope="row">배송방법</th>
                         <td>{$delivery}</td>
@@ -123,7 +118,7 @@
                         <th scope="row">상품 추가설명 번역정보</th>
                         <td>{$additional_description_translated}</td>
                     </tr>
-                </tbody> -->
+                </tbody>
             </table>
         </div>
 

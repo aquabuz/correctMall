@@ -243,11 +243,11 @@
                                                     </ul>
                                                 </li>
                                                 <li class="price">
-                                                    <span class="priceValue {$discount}" title="판매가">
+                                                    <span id="{$confirm_product_price_div_id}" class="priceValue {$discount}" title="판매가">
                                                         {$product_price_front_head}{$product_price_front}{$product_price_front_tail}
                                                         <span class="refer {$product_total_ref_display|display}">({$product_price_back_head}{$product_price_back}{$product_price_back_tail})</span>
                                                     </span>
-                                                    <span class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
+                                                    <span id="{$confirm_product_sale_price_div_id}" class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}<span id="{$confirm_product_sale_price_front_id}">{$product_sale_price_front}</span>{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
                                                     <span title="수량" class="quantity">{$product_quantity_text}개</span>
                                                 </li>
                                                 <li title="배송">{$product_ship_fee} / 기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
@@ -257,7 +257,7 @@
                                     <div class="prdFoot" title="합계">
                                         <span class="gLeft">합계</span>
                                         <span class="txtStrong gRight">
-                                            {$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}
+                                            {$product_total_price_front_head}<span id="{$confirm_product_total_price_front_id}">{$product_total_price_front}</span>{$product_total_price_front_tail}
                                             <span class="refer {$product_total_ref_display|display}">({$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail})</span>
                                         </span>
                                     </div>
@@ -279,11 +279,11 @@
                                                     </ul>
                                                 </li>
                                                 <li class="price">
-                                                    <span class="priceValue {$discount}" title="판매가">
+                                                    <span id="{$confirm_product_price_div_id}" class="priceValue {$discount}" title="판매가">
                                                         {$product_price_front_head}{$product_price_front}{$product_price_front_tail}
                                                         <span class="refer {$product_total_ref_display|display}">({$product_price_back_head}{$product_price_back}{$product_price_back_tail})</span>
                                                     </span>
-                                                    <span class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
+                                                    <span id="{$confirm_product_sale_price_div_id}" class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}<span id="{$confirm_product_sale_price_front_id}">{$product_sale_price_front}</span>{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
                                                     <span title="수량" class="quantity">{$product_quantity_text}개</span>
                                                 </li>
                                                 <li title="배송">{$product_ship_fee} / 기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
@@ -293,7 +293,7 @@
                                     <div class="prdFoot" title="합계">
                                         <span class="gLeft">합계</span>
                                         <span class="txtStrong gRight">
-                                            {$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}
+                                            {$product_total_price_front_head}<span id="{$confirm_product_total_price_front_id}">{$product_total_price_front}</span>{$product_total_price_front_tail}
                                             <span class="refer {$product_total_ref_display|display}">({$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail})</span>
                                         </span>
                                     </div>
@@ -321,9 +321,9 @@
                                                     <th scope="row">부가세</th>
                                                     <td class="right"><span class="txtStrong">+{$normal_total_price_front_head}{$normal_total_vat_price}{$normal_total_price_front_tail}</span></td>
                                                 </tr>
-                                                <tr class="{$normal_total_benefit_price_display|display}">
+                                                <tr id="{$confirm_normal_total_benefit_price_area_id }" class="{$normal_total_benefit_price_display|display}">
                                                     <th scope="row">할인금액</th>
-                                                    <td class="right"><span class="txtStrong">-{$normal_total_price_front_head}{$normal_total_benefit_price}{$normal_total_price_front_tail}</span></td>
+                                                    <td class="right"><span class="txtStrong">-{$normal_total_price_front_head}<span id="{$confirm_normal_total_benefit_price_id}">{$normal_total_benefit_price}</span>{$normal_total_price_front_tail}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">배송비</th>
@@ -358,11 +358,11 @@
                                                     </ul>
                                                 </li>
                                                 <li class="price">
-                                                    <span class="priceValue {$discount}" title="판매가">
+                                                    <span id="{$confirm_product_price_div_id}" class="priceValue {$discount}" title="판매가">
                                                         {$product_price_front_head}{$product_price_front}{$product_price_front_tail}
                                                         <span class="refer {$product_total_ref_display|display}">({$product_price_back_head}{$product_price_back}{$product_price_back_tail})</span>
                                                     </span>
-                                                    <span class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
+                                                    <span id="{$confirm_product_sale_price_div_id}" class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}<span id="{$confirm_product_sale_price_front_id}">{$product_sale_price_front}</span>{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
                                                     <span title="수량" class="quantity">{$product_quantity_text}개</span>
                                                 </li>
                                                 <li title="배송">{$product_ship_fee} / 업체기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
@@ -372,7 +372,7 @@
                                     <div class="prdFoot" title="합계">
                                         <span class="gLeft">합계</span>
                                         <span class="txtStrong gRight">
-                                            {$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}
+                                            {$product_total_price_front_head}<span id="{$confirm_product_total_price_front_id}">{$product_total_price_front}</span>{$product_total_price_front_tail}
                                             <span class="refer {$product_total_ref_display|display}">({$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail})</span>
                                         </span>
                                     </div>
@@ -394,11 +394,11 @@
                                                     </ul>
                                                 </li>
                                                 <li class="price">
-                                                    <span class="priceValue {$discount}" title="판매가">
+                                                    <span id="{$confirm_product_price_div_id}" class="priceValue {$discount}" title="판매가">
                                                         {$product_price_front_head}{$product_price_front}{$product_price_front_tail}
                                                         <span class="refer {$product_total_ref_display|display}">({$product_price_back_head}{$product_price_back}{$product_price_back_tail})</span>
                                                     </span>
-                                                    <span class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
+                                                    <span id="{$confirm_product_sale_price_div_id}" class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}<span id="{$confirm_product_sale_price_front_id}">{$product_sale_price_front}</span>{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
                                                     <span title="수량" class="quantity">{$product_quantity_text}개</span>
                                                 </li>
                                                 <li title="배송">{$product_ship_fee} / 업체기본배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
@@ -408,7 +408,7 @@
                                     <div class="prdFoot" title="합계">
                                         <span class="gLeft">합계</span>
                                         <span class="txtStrong gRight">
-                                            {$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}
+                                            {$product_total_price_front_head}<span id="{$confirm_product_total_price_front_id}">{$product_total_price_front}</span>{$product_total_price_front_tail}
                                             <span class="refer {$product_total_ref_display|display}">({$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail})</span>
                                         </span>
                                     </div>
@@ -435,17 +435,17 @@
                                                     <th scope="row">부가세</th>
                                                     <td class="right"><span class="txtStrong">+{$supplier_total_price_front_head}{$supplier_total_vat_price}{$supplier_total_price_front_tail}</span></td>
                                                 </tr>
-                                                <tr class="{$supplier_total_benefit_price_display|display}">
+                                                <tr id="{$confirm_supplier_total_benefit_price_area_id}" class="{$supplier_total_benefit_price_display|display}">
                                                     <th scope="row">할인금액</th>
-                                                    <td class="right"><span class="txtStrong">-{$supplier_total_price_front_head}{$supplier_total_benefit_price}{$supplier_total_price_front_tail}</span></td>
+                                                    <td class="right"><span class="txtStrong">-{$supplier_total_price_front_head}<span id="{$confirm_supplier_total_benefit_price_id}">{$supplier_total_benefit_price}</span>{$supplier_total_price_front_tail}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">배송비</th>
-                                                    <td class="right"><span class="txtStrong">+{$supplier_total_price_front_head}{$supplier_total_delv_price}{$supplier_total_price_front_tail}</span></td>
+                                                    <td class="right"><span class="txtStrong">+{$supplier_total_price_front_head}<span id="{$confirm_supplier_ship_fee_id}">{$supplier_total_delv_price}</span>{$supplier_total_price_front_tail}</span></td>
                                                 </tr>
                                                 <tr class="displaynone">
                                                     <th scope="row">합계</th>
-                                                    <td class="right"><span class="txtStrong">{$supplier_total_price_front_head}{$supplier_total_price_front}{$supplier_total_price_front_tail} <span class="refer {$supplier_total_ref_display|display}">({$supplier_total_price_back_head}{$supplier_total_price_back}{$supplier_total_price_back_tail})</span></span></td>
+                                                    <td class="right"><span class="txtStrong">{$supplier_total_price_front_head}<span id="{$confirm_supplier_ship_fee_sum_id}">{$supplier_total_price_front}</span>{$supplier_total_price_front_tail} <span class="refer {$supplier_total_ref_display|display}">({$supplier_total_price_back_head}{$supplier_total_price_back}{$supplier_total_price_back_tail})</span></span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -472,11 +472,11 @@
                                                     </ul>
                                                 </li>
                                                 <li class="price">
-                                                    <span class="priceValue {$discount}" title="판매가">
+                                                    <span id="{$confirm_product_price_div_id}" class="priceValue {$discount}" title="판매가">
                                                         {$product_price_front_head}{$product_price_front}{$product_price_front_tail}
                                                         <span class="refer {$product_total_ref_display|display}">({$product_price_back_head}{$product_price_back}{$product_price_back_tail})</span>
                                                     </span>
-                                                    <span class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
+                                                    <span id="{$confirm_product_sale_price_div_id}" class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}<span id="{$confirm_product_sale_price_front_id}">{$product_sale_price_front}</span>{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
                                                     <span title="수량" class="quantity">{$product_quantity_text}개</span>
                                                 </li>
                                                 <li title="배송">{$product_ship_fee} / 개별배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
@@ -486,7 +486,7 @@
                                     <div class="prdFoot" title="합계">
                                         <span class="gLeft">합계</span>
                                         <span class="txtStrong gRight">
-                                            {$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}
+                                            {$product_total_price_front_head}<span id="{$confirm_product_total_price_front_id}">{$product_total_price_front}</span>{$product_total_price_front_tail}
                                             <span class="refer {$product_total_ref_display|display}">({$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail})</span>
                                         </span>
                                     </div>
@@ -508,11 +508,11 @@
                                                     </ul>
                                                 </li>
                                                 <li class="price">
-                                                    <span class="priceValue {$discount}" title="판매가">
+                                                    <span id="{$confirm_product_price_div_id}" class="priceValue {$discount}" title="판매가">
                                                         {$product_price_front_head}{$product_price_front}{$product_price_front_tail}
                                                         <span class="refer {$product_total_ref_display|display}">({$product_price_back_head}{$product_price_back}{$product_price_back_tail})</span>
                                                     </span>
-                                                    <span class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
+                                                    <span id="{$confirm_product_sale_price_div_id}" class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}<span id="{$confirm_product_sale_price_front_id}">{$product_sale_price_front}</span>{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
                                                     <span title="수량" class="quantity">{$product_quantity_text}개</span>
                                                 </li>
                                                 <li title="배송">{$product_ship_fee} / 개별배송 <span class="{$oversea_able_display|display}">(해외배송가능)</span></li>
@@ -522,7 +522,7 @@
                                     <div class="prdFoot" title="합계">
                                         <span class="gLeft">합계</span>
                                         <span class="txtStrong gRight">
-                                            {$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}
+                                            {$product_total_price_front_head}<span id="{$confirm_product_total_price_front_id}">{$product_total_price_front}</span>{$product_total_price_front_tail}
                                             <span class="refer {$product_total_ref_display|display}">({$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail})</span>
                                         </span>
                                     </div>
@@ -549,17 +549,17 @@
                                                     <th scope="row">부가세</th>
                                                     <td class="right"><span class="txtStrong">+{$individual_total_price_front_head}{$individual_total_vat_price}{$individual_total_price_front_tail}</span></td>
                                                 </tr>
-                                                <tr class="{$individual_total_benefit_price_display|display}">
+                                                <tr id="{$confirm_individual_total_benefit_price_area_id}" class="{$individual_total_benefit_price_display|display}">
                                                     <th scope="row">할인금액</th>
-                                                    <td class="right"><span class="txtStrong">-{$individual_total_price_front_head}{$individual_total_benefit_price}{$individual_total_price_front_tail}</span></td>
+                                                    <td class="right"><span class="txtStrong">-{$individual_total_price_front_head}<span id="{$confirm_individual_total_benefit_price_id}">{$individual_total_benefit_price}</span>{$individual_total_price_front_tail}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">배송비</th>
-                                                    <td class="right"><span class="txtStrong">+{$individual_total_price_front_head}{$individual_total_delv_price}{$individual_total_price_front_tail}</span></td>
+                                                    <td class="right"><span class="txtStrong">+{$individual_total_price_front_head}<span id="{$confirm_individual_ship_fee_id}">{$individual_total_delv_price}</span>{$individual_total_price_front_tail}</span></td>
                                                 </tr>
                                                 <tr class="displaynone">
                                                     <th scope="row">합계</th>
-                                                    <td class="right"><span class="txtStrong">{$individual_total_price_front_head}{$individual_total_price_front}{$individual_total_price_front_tail} <span class="refer {$individual_total_ref_display|display}">({$individual_total_price_back_head}{$individual_total_price_back}{$individual_total_price_back_tail})</span></span></td>
+                                                    <td class="right"><span class="txtStrong">{$individual_total_price_front_head}<span id="{$confirm_individual_ship_fee_sum_id}">{$individual_total_price_front}</span>{$individual_total_price_front_tail} <span class="refer {$individual_total_ref_display|display}">({$individual_total_price_back_head}{$individual_total_price_back}{$individual_total_price_back_tail})</span></span></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -588,11 +588,11 @@
                                                     </ul>
                                                 </li>
                                                 <li class="price">
-                                                    <span class="priceValue {$discount}" title="판매가">
+                                                    <span id="{$confirm_product_price_div_id}" class="priceValue {$discount}" title="판매가">
                                                         {$product_price_front_head}{$product_price_front}{$product_price_front_tail}
                                                         <span class="refer {$product_total_ref_display|display}">({$product_price_back_head}{$product_price_back}{$product_price_back_tail})</span>
                                                     </span>
-                                                    <span class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
+                                                    <span id="{$confirm_product_sale_price_div_id}" class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}<span id="{$confirm_product_sale_price_front_id}">{$product_sale_price_front}</span>{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
                                                     <span title="수량" class="quantity">{$product_quantity_text}개</span>
                                                 </li>
                                                 <li title="배송">{$product_ship_fee} / 해외배송</li>
@@ -602,7 +602,7 @@
                                     <div class="prdFoot" title="합계">
                                         <span class="gLeft">합계</span>
                                         <span class="txtStrong gRight">
-                                            {$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}
+                                            {$product_total_price_front_head}<span id="{$confirm_product_total_price_front_id}">{$product_total_price_front}</span>{$product_total_price_front_tail}
                                             <span class="refer {$product_total_ref_display|display}">({$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail})</span>
                                         </span>
                                     </div>
@@ -624,11 +624,11 @@
                                                     </ul>
                                                 </li>
                                                 <li class="price">
-                                                    <span class="priceValue {$discount}" title="판매가">
+                                                    <span id="{$confirm_product_price_div_id}" class="priceValue {$discount}" title="판매가">
                                                         {$product_price_front_head}{$product_price_front}{$product_price_front_tail}
                                                         <span class="refer {$product_total_ref_display|display}">({$product_price_back_head}{$product_price_back}{$product_price_back_tail})</span>
                                                     </span>
-                                                    <span class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}{$product_sale_price_front}{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
+                                                    <span id="{$confirm_product_sale_price_div_id}" class="{$product_sale_price_display|display}" title="할인판매가">{$product_sale_price_front_head}<span id="{$confirm_product_sale_price_front_id}">{$product_sale_price_front}</span>{$product_sale_price_front_tail} <span class="refer {$product_sale_price_ref_display|display}">({$product_sale_price_back_head}{$product_sale_price_back}{$product_sale_price_back_tail})</span></span>
                                                     <span title="수량" class="quantity">{$product_quantity_text}개</span>
                                                 </li>
                                                 <li title="배송">{$product_ship_fee} / 해외배송</li>
@@ -638,7 +638,7 @@
                                     <div class="prdFoot" title="합계">
                                         <span class="gLeft">합계</span>
                                         <span class="txtStrong gRight">
-                                            {$product_total_price_front_head}{$product_total_price_front}{$product_total_price_front_tail}
+                                            {$product_total_price_front_head}<span id="{$confirm_product_total_price_front_id}">{$product_total_price_front}</span>{$product_total_price_front_tail}
                                             <span class="refer {$product_total_ref_display|display}">({$product_total_price_back_head}{$product_total_price_back}{$product_total_price_back_tail})</span>
                                         </span>
                                     </div>
@@ -665,9 +665,9 @@
                                                     <th scope="row">부가세</th>
                                                     <td class="right"><span class="txtStrong">+{$price_unit_head}<span id="{$f_list_vat_price_id}">{$oversea_total_vat_price}</span>{$price_unit_tail}</span></td>
                                                 </tr>
-                                                <tr class="{$oversea_total_benefit_price_display|display}">
+                                                <tr id="{$confirm_oversea_total_benefit_price_area_id}" class="{$oversea_total_benefit_price_display|display}">
                                                     <th scope="row">할인금액</th>
-                                                    <td class="right"><span class="txtStrong">-{$price_unit_head}{$oversea_total_benefit_price}{$price_unit_tail}</span></td>
+                                                    <td class="right"><span class="txtStrong">-{$price_unit_head}<span id="{$confirm_oversea_total_benefit_price_id}">{$oversea_total_benefit_price}</span>{$price_unit_tail}</span></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">배송비</th>
@@ -751,7 +751,7 @@
                                         </tr>
                                         <tr class="discountArea">
                                             <td colspan="2">
-                                                <div class="ec-base-box {$total_benefit_display|display}">
+                                                <div id="{$confirm_total_sale_price_area}" class="ec-base-box {$total_benefit_display|display}">
                                                     <strong class="heading">자동 할인</strong>
                                                     <div class="ec-base-table gCellNarrow">
                                                         <table border="1">
@@ -760,7 +760,7 @@
                                                                 <col style="width:122px" />
                                                                 <col style="width:auto" />
                                                             </colgroup>
-                                                            <tbody>
+                                                            <tbody id="{$confirm_total_benefit_list_id}">
                                                                 <tr id="{$confirm_total_mobilesale_area}">
                                                                     <th>모바일할인</th>
                                                                     <td class="right">-<span id="{$confirm_total_mobilesale_id}"></span></td>

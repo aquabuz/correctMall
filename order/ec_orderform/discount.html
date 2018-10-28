@@ -47,7 +47,7 @@
                     </ul>
                     <ul id="{$coupon_use_list_id}" style="display:none;" class="ec-base-help ec-order-expandwrap"></ul>
                 </div>
-                <div class="discountDetail {$mileage_display|display}">
+                <div id="{$mileage_use_area_id}" class="discountDetail {$mileage_display|display}">
                     <strong class="heading">{$mileage_name}</strong>
                     <span class="summary">(사용 가능 <span class="txtEm">{$mileage_unit_head}{$total_avail_mileage}{$mileage_unit_tail}</span>)</span>
                     <div class="control">
@@ -103,7 +103,7 @@
                                     <col style="width:130px" />
                                     <col style="width:auto" />
                                 </colgroup>
-                                <tbody>
+                                <tbody id="{$total_benefit_list_id}">
                                     <tr class="{$total_periodsale_price_display|display}">
                                         <th scope="row">기간할인</th>
                                         <td class="right">-<span id="{$total_periodsale_price_id}">{$price_unit_head}{$total_periodsale_price}{$price_unit_tail}</span></td>
