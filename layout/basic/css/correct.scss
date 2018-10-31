@@ -412,3 +412,18 @@ html {
   background: none;
   // @extend %time;
 }
+
+#opt_layer_background {
+  // display: none !important;
+}
+
+#opt_layer_iframe_parent {
+  top: 0 !important;
+  height: 100% !important;
+}
+
+#productOptionIframe {
+  position: fixed;
+  height: 100% !important;
+  // height: 600px !important;
+}
